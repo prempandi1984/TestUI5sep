@@ -9,4 +9,4 @@ server:
       configuration:
         backend:
         - path: /sap/opu/odata
-          url: http://s4dev.st.com:8021/2
+          url: http://s4dev.st.com:8021/
