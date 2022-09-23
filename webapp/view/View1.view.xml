@@ -1,0 +1,56 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="act.fin.ar.controller.View1">
+    <Page title ="This is View1">
+    <headerContent>
+        <Button icon="sap-icon://action" press="onNext"/>
+    </headerContent>
+    <SearchField id="idSearch" search="onSearch" liveChange="onSearch"></SearchField>
+    <List id="idList" mode="SingleSelectMaster"  
+          items="{path: '/ProductSet', sorter:{path: 'NAME'}}" delete="onItemDelete"
+          growing="true" growingThreshold="10"
+           selectionChange="onSelChange">
+    <items>
+        <ObjectListItem title="{NAME}" intro="{CATEGORY}" number="{PRICE}" numberUnit="{CURRENCY_CODE}"
+                icon="sap-icon://product">
+        </ObjectListItem>
+    </items>
+    </List>
+    <footer>
+    <Toolbar>
+    <ToolbarSpacer />
+        <Button text="Add" icon="sap-icon://Add" press="onAdd"></Button>
+    </Toolbar>
+    </footer>
+    </Page>
+</mvc:View>
+    <!-- <SearchField id="idSearch"></SearchField>
+        <List id="idList">
+            <items>
+            <DisplayListItem label="Apple" value="one of the best antibiotic"></DisplayListItem>
+            <StandardListItem title="Banana" description="Rich source of pottasium" 
+            icon="https://www.esakha.com/files/product/image/123/banana.png"></StandardListItem>
+            <InputListItem>
+              <content>
+               <HBox>
+                <Label class="sapUiSmallMarginTop" text="How many banana's you want to order?"></Label>
+                <Input width="30%"></Input>
+               </HBox>
+              </content>
+            </InputListItem>
+            <ObjectListItem title="PineApple" intro="increase glow of your skin" number="500" numberUnit="per KG"
+            icon="http://assets.stickpng.com/images/580b57fcd9996e24bc43c181.png"></ObjectListItem>
+            <CustomListItem>
+            <content>
+            <HBox>
+            <Label class="sapUiSmallMarginTop" text="Do u want COD?"></Label>
+            <Switch></Switch>
+            </HBox>
+            </content>
+            </CustomListItem>
+            <FeedListItem sender="PM Modi" text="Hello anubhav,how are you?" timestamp="sunday 08 May" 
+            icon="https://upload.wikimedia.org/wikipedia/commons/c/c0/Official_Photograph_of_Prime_Minister_Narendra_Modi_Potrait.png">
+            </FeedListItem>
+            <ActionListItem text="Order Now!"></ActionListItem>
+            </items>
+        </List> -->
+    <!-- </Page>
+</mvc:View> -->
